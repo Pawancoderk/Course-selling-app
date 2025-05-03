@@ -6,7 +6,7 @@ const ObjectId  = mongoose.Types.ObjectId
 mongoose.connect(process.env.MONGODB_URL);
 console.log("connected to db")
 
-const userSchema = Schema({
+const userSchema = new  Schema({
     email: {
         type: String,
         unique: true,
@@ -16,7 +16,7 @@ const userSchema = Schema({
     lastName: String
 })
 
-const adminSchema = Schema({
+const adminSchema = new Schema({
     email: {
         type: String,
         unique: true,
@@ -26,7 +26,7 @@ const adminSchema = Schema({
     lastName: String
 })
 
-const courseSchema = Schema({
+const courseSchema = new Schema({
 title:String,
 desc:String,
 price:Number,
@@ -34,7 +34,7 @@ imageUrl:String,
 createrId:ObjectId
 
 })
-const purchaseSchema = Schema({
+const purchaseSchema = new Schema({
 userId:ObjectId,
 courseId:ObjectId,
 
