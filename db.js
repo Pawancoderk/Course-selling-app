@@ -3,8 +3,7 @@ const dotenv = require("dotenv");
 dotenv.config()
 const Schema  = mongoose.Schema;
 const ObjectId  = mongoose.Types.ObjectId
-mongoose.connect(process.env.MONGODB_URL);
-console.log("connected to db")
+
 
 const userSchema = new  Schema({
     email: {
