@@ -10,7 +10,10 @@ const userSchema = new  Schema({
         type: String,
         unique: true,
     },
-    passsword: String,
+    password: {
+       type:String,
+       required:true
+    },
     firstName: String,
     lastName: String
 })
@@ -20,7 +23,7 @@ const adminSchema = new Schema({
         type: String,
         unique: true,
     },
-    passsword: String,
+    password: String,
     firstName: String,
     lastName: String
 })
